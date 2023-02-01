@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #total{
+            width: 800px;
+            height: 800px;
+            background: lightcyan;
+        }
+        #center{
+            padding: 30px;
+            align-content: center;
+            vertical-align: middle;
+            width: 700px;
+            height: 500px;
+        }
+        div{
+            font-size: 15px;
+            font-weight: bold;
+            color: black;
+        }
+        #top{
+            width: 800px;
+            height: 100px;
+            background: lightblue;
+            padding: 2px;
+        }
+        #top2{
+            border: 5px dotted white;
+            box-shadow: 3px 3px darkgray;
+            background-color: black;
+            color: white;
+            border-radius: 100px 10px;
+            width: 120px;
+            height: 50px;
+            position: fixed;
+            top: 5px;
+            right: 5px;
+        }
+        li{
+            list-style: none; /* 리스트 맨앞 도트 없애기 위함 */
+            float: left; /* 한줄로 세우기 위함 */
+            padding: 15px; /* 너무 다닥다닥 붙어있는것을 띄우기 */
+            width: 70px;
+            height: 20px;
+            text-align: center;
+        }
+        li:last-child {
+        border-radius: 0 50px 50px 0;
+        }
+        li:first-child {
+            border-radius: 50px 0 0 50px;
+        }
+        li:nth-child(2n){
+            /* li중에서도 짝수번째 */
+            background: white;
+        }
+        li:nth-child(2n+1){
+            /* li중에서도 홀수번째 */
+            background: darkgray;
+        }
+        a{
+            text-decoration: none; /* 밑줄 사라져 보이기 위함 */
+            color: black;
+            font-weight: bold;
+        }
+        a:hover{
+            background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="total">
+        <div id="top">
+            <ul>
+                <li>
+                    <!-- 뭐치고 + 컨트롤 + 스페이스바 하면 예시 뜸 --> <!-- ex) a 컨트롤 + 스페이스바 -->
+                    <a href="page20.html">회원가입</a>
+                </li>
+                <li>
+                    <!-- ex) a 컨트롤 + 스페이스바 -->
+                    <a href="page10.html">제품정보</a>
+                </li>
+                <li>
+                    <!-- ex) a 컨트롤 + 스페이스바 -->
+                    <a href="page30.html">게시판</a>
+                </li>
+                <li>
+                    <!-- ex) a 컨트롤 + 스페이스바 -->
+                    <a href="page40.html">장바구니</a>
+                </li>
+            </ul>
+        </div>
+        <div id="top2" align="center" >
+            고정된 화면<br>보이는 부분.
+        </div>
+        <div id="center">
+            <h3>검색할 단어를 입력하세요.</h3>
+           <form action="보내는 서버주소">
+            검색어 <input type="text">
+            <button>검색어 전송</button> <!--버튼과 같음 <input type="submit" value=""> -->
+           </form>
+           <hr color="red">
+           <form action="보내는 서버주소">
+            <table>
+                <tr>
+                    <td>아이디</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>패스워드</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button>로그인 처리 요청</button></td>
+                </tr>
+            </table>
+           </form>
+           <hr color="red">
+           <form>
+            <h3>회원가입 화면</h3>
+            <table>
+                <tr>
+                    <td>가입 아이디</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>가입 패스워드</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>가입 이름</td>
+                    <td><input type="text" placeholder="성과이름을 순서대로 붙여쓰세요."></td> <!-- input type="text" placeholder="성과이름을 순서대로 붙여쓰세요."  -->
+                </tr>
+                <tr>
+                    <td>성별</td>
+                    <td>남<input type="radio" name="gender"> 여<input type="radio" name="gender">></td> <!-- input type="radio" 여러개중 하나만 선택할때 -->
+                </tr>
+                <tr>
+                    <td>취미</td>
+                    <td>등산<input type="checkbox" name="hobby">
+                        독서<input type="checkbox" name="hobby">
+                        운동<input type="checkbox" name="hobby">
+                         <!-- input type="checkbox" 여러개 선택할때 -->
+                    </td>
+                </tr>
+                <tr>
+                    <td>전화번호 통신사</td>
+                    <td>
+                        <select>
+                            <option>SKT</option>
+                            <option>LG</option>
+                            <option>KT</option>
+                            <option>알뜰폰</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" placeholder=" -없이 숫자만 이어서">
+                    </td>
+                </tr>
+                <tr>
+                    <td>생년월일</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>가입한 날짜</td>
+                    <td><input type="datetime"></td>
+                </tr>
+                <tr>
+                    <td>하고 싶은말</td>
+                    <td>
+                        <textarea name="word" cols="30" rows="10" placeholder="100글자 이내로 써주세요."></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button>회원가입 처리 요청</button></td>
+                </tr>
+            </table>
+
+
+           </form>
+        </div>
+    </div>
+</body>
+</html>

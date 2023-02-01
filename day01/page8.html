@@ -1,0 +1,43 @@
+<!-- <input type="submit" value=""> == <button></button>
+버튼을 만드는 법 1.input타입submit 2.버튼태그 -->
+<!-- 자동 정렬 단축키 : shift + alt + f -->
+<!-- 색상 내가 원하는것으로 하고싶으면 구글에 colorpicker 검색해서 누르고 #00000 복사해서 bgcolor="#000000"에 적용 -->
+<!-- 표 선 색상 바꾸기 bordercolor="red" -->
+<!-- html 태이블 테두리 색상 <-- 처럼 앞에 문법이름과 궁금한것 같이 이런식으로 서치 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea</title>
+</head>
+<body>
+    <table border="1" bordercolor="red"> <!-- 표 선 색상 바꾸기 bordercolor="red" -->
+        <tr align="center"  bgcolor="lime">
+            <td width="100">항목</td>
+            <td width="300">입력</td>
+        </tr>
+        <tr align="center">
+            <td>번호</td>
+            <td bgcolor="#ffb8fa"><input type="text" style="background: pink;"></td>
+        </tr>
+        <tr align="center">
+            <td>제목</td>
+            <td bgcolor="yellow"><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <td>내용</td>
+            <td bgcolor="yellow"><textarea cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr align="center">
+            <td>작성자</td>
+            <td bgcolor="yellow"><input type="text"></td>
+        </tr>
+        <tr align="center">
+            <td colspan="2" bgcolor="yellow"><button>글쓰기 완료</button></td>
+        </tr>
+    </table>
+</body>
+</html>
