@@ -39,7 +39,7 @@
     function check(){
       //length_id >= 5 고 pw1_value == pw2_value 일때 회원가입 성공 메세지 나타내기
       if(length_id >= 5 && pw1_value == pw2_value){
-        div_result = document.getElementById("result");
+        div_result = document.getElementById("result"); //접근연산자
         div_result.innerHTML = "<font color=blue>회원가입 성공</font>";
       }else {
         div_result.innerHTML = "<font color=red>회원가입 실패</font>";  
