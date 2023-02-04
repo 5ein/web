@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+          [ '세인', new Date(2000, 5, 25), new Date(2023, 2, 3) ],
+          [ '예은',      new Date(2001, 1, 7),  new Date(2023, 2, 3) ],
+          [ '선영',  new Date(2001, 5, 7),  new Date(2023, 2, 3) ],
+          [ '서현',  new Date(2003, 4, 21),  new Date(2023, 2, 3) ]]);
+
+        chart.draw(dataTable);
+      }
+    </script>
+
+</head>
+<body>
+    <div id="timeline" style="height: 250px;"></div>
+</body>
+</html>

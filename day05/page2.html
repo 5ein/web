@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- 반응형 웹사이트 만들때 필수 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 반응형 웹사이트 만들때 필수 -->
+    <title>Document</title>
+    <script>
+      function tour() {
+        // 1. input입력값 받아오기
+        space_value = document.getElementById("space").value; //대소문자 구분때문에 value를 Value 라고 쓰면 실행이 안된다.
+        month_value = document.getElementById("month").value; //대소문자 구분때문에 value를 Value 라고 쓰면 실행이 안된다.
+        choice_value = document.getElementById("choice").value; //대소문자 구분때문에 value를 Value 라고 쓰면 실행이 안된다.
+
+        // 2. 처리
+        let method = ""; //사용전 정의해주기! 문자는 반드시 "" 또는 '' 를넣어주기
+        let price = 0; //사용전 정의해주기! 숫자는 0 넣어주기
+
+        if (choice_value == "1") {
+          method = "비행기를";
+          price = 30000;
+        } else if (choice_value == "2") {
+          method = "버스를";
+          price = 10000;
+        } else if (choice_value == "3") {
+          method = "기차를";
+          price = 20000;
+        } else {
+          method = "자가용을";
+          price = 50000;
+        }
+
+        plan = "나는 <font color=darkpink>" + month_value + "월</font>에 <font color=blue>" + space_value + "</font>으로 <font color=green>" + method + " </font>타고 여행을 갈거예요, 비용은 <font color=red>" + price + "원</font> 이에요!";
+
+        // 3. 결과를 출력하기
+        result_tag = document.getElementById("result");
+        result_tag.innerHTML = plan;
+      }
+    </script>
+  </head>
+  <body>
+    여행가고 싶은 곳: <input type="text" value="부산" id="space" /><br />
+    몇월에 갈까요: <input type="text" value="1" id="month" /><br />
+    무얼 타고 갈까요: 1)비행기(30000), 2)버스(10000), 3)기차(20000), 4)자가용(50000)
+    <input type="text" value="1" id="choice" /><br />
+    <button onclick="tour()">여행 계획 버튼</button>
+    <!-- 함수는 항상 ()같이적어줘야함 -->
+    <div id="result">
+      <!-- 나는 1월에 부산으로 비행기를 타고 여행을 갈거예요, 비용은 3000원 이런식으로 나오게 하기 -->
+      <font color="blue">나의 계획</font>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ajax사용해보기</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> <!-- 저기 js주소에 슬림이 붙어있으면 ajax 뺀거여서 ajax사용이 안된대 -->
+
+    <script>
+      $(function () {
+
+        //b1을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b1").click(function () {
+          //$('#b1') == document.getElementById('b1')
+          //alert('b1 클릭함.') //작동되는지 확인해봄
+          $.ajax({
+            url: "ok.html",
+            success: function (x) {
+              //ok.html 내용이 x에 들어감
+              $("#d1").html(x);
+            },
+          });
+        }); //b1
+
+        //b2을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b2").click(function () {
+          //$('#b2') == document.getElementById('b2')
+          //alert('b2 클릭함.') //작동되는지 확인해봄
+          $.ajax({
+            url: "weather.html",
+            success: function (x) {
+              //weather.html 내용이 x에 들어감
+              $("#d2").html(x);
+            },
+          });
+        }); //b2
+
+        //b3을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b3").click(function () {
+          //$('#b3') == document.getElementById('b3')
+          //alert('b3 클릭함.') //작동되는지 확인해봄
+          $.ajax({
+            url: "tour.html",
+            success: function (x) {
+              //tour.html 내용이 x에 들어감
+              $("#d3").html(x);
+            },
+          });
+        }); //b3
+
+      }); //$
+    </script>
+  </head>
+  <body>
+    <button id="b1">AjaxTest 받아오기</button>
+    <button id="b2">기상청정보 받아오기</button>
+    <button id="b3">여행정보 받아오기</button>
+    <hr />
+    <div
+      id="d1"
+      style="width: 200px; height: 100px; background: lightgreen"
+    ></div>
+    <div id="d2" style="width: 200px; height: 100px; background: skyblue"></div>
+    <div id="d3" style="width: 200px; height: 100px; background: pink"></div>
+  </body>
+</html>

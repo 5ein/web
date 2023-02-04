@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ajax사용해보기</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> <!-- 저기 js주소에 슬림이 붙어있으면 ajax 뺀거여서 ajax사용이 안된대 -->
+
+    <script>
+      $(function () {
+
+        //b1을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b1").click(function () {
+          $.ajax({
+            url: "info.html",
+            success: function (x) {
+              $("#d1").html(x);
+            },
+          });
+        }); //b1
+
+        //b2을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b2").click(function () {
+          $.ajax({
+            url: "info2.html",
+            success: function (x) {
+              $("#d2").html(x);
+            },
+          });
+        }); //b2
+
+        //b3을 클릭했을 때 오른쪽에 있는 함수 내용을 실행해주세요!
+        $("#b3").click(function () {
+          $.ajax({
+            url: "info3.html",
+            success: function (x) {
+              $("#d3").html(x);
+            },
+          });
+        }); //b3
+
+      }); //$
+    </script>
+  </head>
+  <body>
+    <button id="b1">영화정보 받아오기</button><!-- info.html -->
+    <button id="b2">코로나정보 받아오기</button><!-- info2.html -->
+    <button id="b3">교통정보 받아오기</button><!-- info3.html -->
+    <hr />
+    <div
+      id="d1"
+      style="width: 200px; height: 100px; background: rgb(225, 255, 207)"
+    ></div>
+    <div id="d2" style="width: 200px; height: 100px; background: rgb(192, 236, 254)"></div>
+    <div id="d3" style="width: 200px; height: 100px; background: rgb(255, 198, 212)"></div>
+  </body>
+</html>
