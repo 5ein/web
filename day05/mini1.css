@@ -1,0 +1,54 @@
+      body {
+        text-align: center;
+      }
+      #nav1 {
+        position: relative;
+        width: 20%;
+      }
+      #nav2 {
+        position: relative;
+        width: 60%;
+      }
+      #table1 {
+        width: 97%;
+        min-width: 530px;
+        margin: auto;
+      }
+      th {
+        padding: 5px;
+        background-color: rgb(235, 235, 235);
+      }
+      td {
+        padding-left: 10px;
+      }
+      ul {
+        list-style:none;
+      }
+      h3 {
+        margin-top: 10px;
+      }
+      h4 {
+        font-size: 15px;
+        min-width: 120px;
+      }
+      li {
+        padding-top: 5px;
+        list-style: none;
+        position: relative;
+        text-align: left;
+      }
+      .issue {
+        text-align: left;
+        text-decoration: underline;
+      }
+      #table2 {
+        border-spacing: 5px 0;
+        max-height: 200px;
+      }
+      .hotissu {
+        width: 200px;
+        height: 150px;
+      }
+      .mini_issue {
+        font-weight: bold;
+      }

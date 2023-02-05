@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+  }
+  #table1 {
+    margin: auto;
+    width: 300px;
+    border-spacing: 0 10px;
+  }
+  .idpw {
+    width: 300px;
+    height: 30px;
+  }
+  .left {
+    text-align: left;
+  }
+  button {
+    width: 300px;
+    height: 30px;
+  }
+  a {
+    color: black;
+  }
+  hr {
+    width: 500px;
+  }
+  #table2 {
+    margin: auto;
+    width: 300px;
+    border-spacing: 0 0;
+  }
