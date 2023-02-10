@@ -26,7 +26,7 @@ public class 배열다루기 {
 		}
 
 //		2.우리가족의 이름을 String[]으로 저장, 프린트
-		String[] fname = { "황인섭", "배서연", "황세인", "황세원", "황진호" };
+		String[] fname = { "아빠", "엄마", "나", "여동생", "남동생" };
 		for (int i = 0; i < fname.length; i++) {
 			System.out.print(fname[i] + " ");
 		}
